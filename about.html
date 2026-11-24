@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>من نحن | متجر M</title>
+
+  <!-- خط Cairo من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <!-- ملف التنسيقات الرئيسي -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/enhancements.css" />
+</head>
+<body>
+
+  <!-- 1. الهيدر الثابت -->
+  <header class="site-header">
+    <div class="container header-container">
+<a href="index.html" class="logo">
+  <img src="images/logo.jpg" alt="Thawbi - ثوبي" class="logo-img" onerror="this.style.display='none'" />
+  <span class="logo-text">Thawbi</span>
+</a>
+
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="about.html" class="nav-link active">من نحن</a>
+        <a href="contact.html" class="nav-link">تواصل معنا</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="cart.html" class="cart-btn" aria-label="سلة التسوق">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- قائمة الهاتف المنسدلة -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link">الرئيسية</a>
+      <a href="about.html" class="mobile-nav-link active">من نحن</a>
+      <a href="contact.html" class="mobile-nav-link">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <!-- 2. المحتوى الرئيسي -->
+  <main class="container main-content">
+    <h1 class="page-title">من نحن</h1>
+
+    <section class="card" style="display: flex; flex-direction: column; gap: 24px;">
+      
+      <!-- مقدمة -->
+      <div>
+        <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; color: var(--color-black);">
+          تعريف بمتجر M
+        </h2>
+<p style="color: var(--text-muted); font-size: 1rem;">
+  متجر <strong>ثوبي (Thawbi)</strong> هو متجر إلكتروني جزائري متخصص في بيع <strong>الأقمصة الرجالية</strong> الأنيقة والعملية بأسلوب بسيط ومباشر. نعتمد نظام البيع المباشر <strong>يداً بيد</strong> دون وسطاء أو رسوم توصيل إضافية، لتتمكن من معاينة قطعتك واستلامها بكل راحة وشفافية.
+</p>
+      </div>
+
+      <!-- رسالتنا -->
+      <div style="border-top: 1px solid var(--border-color); padding-top: 20px;">
+        <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; color: var(--color-black);">
+          رسالتنا
+        </h2>
+<p style="color: var(--text-muted); font-size: 1rem;">
+  تقديم أقمصة تجمع بين خامة القماش المريحة، التفصيل المتقن، والسعر العادل والمناسب للجميع، مع تجربة شراء سريعة خالية من التعقيدات.
+</p>
+      </div>
+
+      <!-- قيمنا -->
+      <div style="border-top: 1px solid var(--border-color); padding-top: 20px;">
+        <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 12px; color: var(--color-black);">
+          قيمنا
+        </h2>
+        <ul class="features-list">
+          <li><strong>الجودة:</strong> اختيار أقمشة خفيفة ومريحة تدوم مع الاستخدام اليومي.</li>
+          <li><strong>الثقة:</strong> التسليم يداً بيد والدفع عند الاستلام يضمنان حقك في المعاينة قبل الدفع.</li>
+          <li><strong>سهولة الطلب:</strong> خطوات معدودة فقط لتأكيد طلبك دون الحاجة لإنشاء حساب أو تعبئة استمارات طويلة.</li>
+          <li><strong>التواصل المباشر:</strong> فريقنا على اتصال مباشر معك لتنسيق موعد ومكان التسليم بكل مرونة.</li>
+        </ul>
+      </div>
+
+      <!-- منتجاتنا -->
+      <div style="border-top: 1px solid var(--border-color); padding-top: 20px;">
+        <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; color: var(--color-black);">
+          منتجاتنا
+        </h2>
+
+<p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 16px;">
+  نقدّم تشكيلة منتقاة من <strong>الأقمصة الرجالية</strong>، ومن أبرز إصداراتنا الحالية <strong>قميص الأدهم</strong> بـ 4 ألوان عصرية ومقاسات متنوعة (من 52 إلى 58) بسعر موحّد <strong>3700 د.ج</strong>.
+</p>
+
+<a href="index.html" class="btn btn-green">اكتشف قميص الأدهم الآن</a>
+        
+<a href="index.html" class="btn btn-green">استكشف القميص الصيفي الآن</a>
+        <a href="index.html" class="btn btn-green">استكشف القميص الصيفي الآن</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- الفوتر البسيط -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>جميع الحقوق محفوظة &copy; متجر <strong>M</strong> — التسليم يدا بيد</p>
+    </div>
+  </footer>
+
+  <!-- ملفات الجافاسكريبت المشتركة لتحديث عدّاد السلة وقائمة الهاتف -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/enhancements.js"></script>
+</body>
+</html>

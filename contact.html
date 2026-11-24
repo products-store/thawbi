@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصل معنا | متجر M</title>
+
+  <!-- خط Cairo من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <!-- ملف التنسيقات الرئيسي -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/enhancements.css" />
+
+</head>
+<body>
+
+  <!-- 1. الهيدر الثابت -->
+  <header class="site-header">
+    <div class="container header-container">
+<a href="index.html" class="logo">
+  <img src="images/logo.jpg" alt="Thawbi - ثوبي" class="logo-img" onerror="this.style.display='none'" />
+  <span class="logo-text">Thawbi</span>
+</a>
+
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="about.html" class="nav-link">من نحن</a>
+        <a href="contact.html" class="nav-link active">تواصل معنا</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="cart.html" class="cart-btn" aria-label="سلة التسوق">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- قائمة الهاتف المنسدلة -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link">الرئيسية</a>
+      <a href="about.html" class="mobile-nav-link">من نحن</a>
+      <a href="contact.html" class="mobile-nav-link active">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <!-- 2. المحتوى الرئيسي (تخطيط عمودين على الحاسوب وعمود واحد على الهاتف) -->
+  <main class="container main-content">
+    <h1 class="page-title">تواصل معنا</h1>
+
+    <div class="contact-grid">
+      
+      <!-- العمود الأول: معلومات التواصل -->
+      <section class="card" style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 0;">
+        <div class="section-header" style="margin-bottom: 4px;">
+          <h2>معلومات التواصل</h2>
+          <p>يسعدنا الرد على استفساراتكم وتنسيق مواعيد التسليم يداً بيد</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+<div style="padding: 14px; background: var(--bg-page); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+  <strong style="display: block; font-size: 0.95rem; margin-bottom: 4px;">📞 رقم الهاتف:</strong>
+  <a href="tel:0562783958" dir="ltr" style="color: var(--color-green); font-weight: 800; font-size: 1.05rem;">
+    0562 78 39 58
+  </a>
+</div>
+
+          <div style="padding: 14px; background: var(--bg-page); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+            <strong style="display: block; font-size: 0.95rem; margin-bottom: 4px;">📸 إنستغرام:</strong>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color: var(--color-green); font-weight: 700;">
+              @m.store.dz
+            </a>
+          </div>
+
+          <div style="padding: 14px; background: var(--bg-page); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+            <strong style="display: block; font-size: 0.95rem; margin-bottom: 4px;">🕒 أوقات التواصل والتسليم:</strong>
+            <span style="color: var(--text-muted); font-size: 0.95rem;">
+              يومياً من الساعة 09:00 صباحاً إلى 21:00 مساءً
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- العمود الثاني: نموذج المراسلة -->
+      <section class="card" style="margin-bottom: 0;">
+        <div class="section-header">
+          <h2>أرسل لنا رسالة</h2>
+          <p>اترك استفسارك وسنتواصل معك في أقرب وقت</p>
+        </div>
+
+        <form id="contactForm" novalidate style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="form-group">
+            <label for="contactName">الاسم الكامل <span class="required">*</span></label>
+            <input type="text" id="contactName" placeholder="أدخل اسمك" required />
+            <small class="error-msg" id="contactNameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="contactInfo">رقم الهاتف أو البريد الإلكتروني <span class="required">*</span></label>
+            <input type="text" id="contactInfo" placeholder="مثال: 0550123456 أو name@email.com" required />
+            <small class="error-msg" id="contactInfoError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">الرسالة <span class="required">*</span></label>
+            <textarea id="contactMessage" rows="4" placeholder="اكتب رسالتك أو استفسارك هنا..." required></textarea>
+            <small class="error-msg" id="contactMessageError"></small>
+          </div>
+
+          <button type="submit" class="btn btn-green btn-submit" id="contactSubmitBtn">
+            إرسال الرسالة
+          </button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- الفوتر البسيط -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>جميع الحقوق محفوظة &copy; متجر <strong>M</strong> — التسليم يدا بيد</p>
+    </div>
+  </footer>
+
+  <!-- حاوية الإشعارات المنبثقة -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- ملفات الجافاسكريبت -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/discord.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const contactForm = document.getElementById("contactForm");
+      const nameInput = document.getElementById("contactName");
+      const infoInput = document.getElementById("contactInfo");
+      const msgInput = document.getElementById("contactMessage");
+      const submitBtn = document.getElementById("contactSubmitBtn");
+
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = nameInput.value.trim();
+        const contact = infoInput.value.trim();
+        const message = msgInput.value.trim();
+
+        const nameErr = document.getElementById("contactNameError");
+        const infoErr = document.getElementById("contactInfoError");
+        const msgErr = document.getElementById("contactMessageError");
+
+        nameErr.textContent = "";
+        infoErr.textContent = "";
+        msgErr.textContent = "";
+
+        let valid = true;
+        if (name.length < 2) {
+          nameErr.textContent = "يرجى إدخال الاسم.";
+          valid = false;
+        }
+        if (contact.length < 5) {
+          infoErr.textContent = "يرجى إدخال رقم هاتف أو بريد إلكتروني صحيح.";
+          valid = false;
+        }
+        if (message.length < 5) {
+          msgErr.textContent = "يرجى كتابة نص الرسالة.";
+          valid = false;
+        }
+
+        if (!valid) return;
+
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "جاري الإرسال... ⏳";
+
+        try {
+          await DiscordService.sendContactMessage({ name, contact, message });
+          StoreUI.showToast("تم إرسال رسالتك بنجاح، شكراً لتواصلك معنا!");
+          contactForm.reset();
+        } catch (err) {
+          console.error(err);
+          StoreUI.showToast("تعذر إرسال الرسالة حالياً، يرجى المحاولة لاحقاً.", "error");
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      });
+    });
+  </script>
+
+<script src="assets/js/enhancements.js"></script>
+</body>
+</html>

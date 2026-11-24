@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thawbi | قميص الأدهم - تسليم يدا بيد</title>
+
+  <!-- خط Cairo من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />  
+  <!-- ملف التنسيقات الرئيسي -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/enhancements.css" />
+</head>
+<body>
+
+  <!-- 1. الهيدر الثابت (يظهر في كل الصفحات) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- الشعار -->
+<a href="index.html" class="logo">
+  <img src="images/logo.jpg" alt="Thawbi - ثوبي" class="logo-img" onerror="this.style.display='none'" />
+  <span class="logo-text">Thawbi</span>
+</a>
+
+      <!-- القائمة الرئيسية (سطح المكتب) -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link active">الرئيسية</a>
+        <a href="about.html" class="nav-link">من نحن</a>
+        <a href="contact.html" class="nav-link">تواصل معنا</a>
+      </nav>
+
+      <!-- أيقونة السلة + زر القائمة للهاتف -->
+      <div class="header-actions">
+        <a href="cart.html" class="cart-btn" aria-label="سلة التسوق">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- قائمة الهاتف المنسدلة -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link active">الرئيسية</a>
+      <a href="about.html" class="mobile-nav-link">من نحن</a>
+      <a href="contact.html" class="mobile-nav-link">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <!-- 2. المحتوى الرئيسي -->
+  <main class="container main-content">
+    
+    <!-- بطاقة المنتج -->
+    <section class="card product-section">
+      <!-- 2.1 قسم الصور (صورة رئيسية + 4 مصغرة لكل لون) -->
+      <div class="product-gallery">
+        <div class="main-image-wrapper">
+          <img id="mainProductImage" src="assets/images/products/color1-1.jpg" alt="قميص الأدهم" class="main-image" />
+        </div>
+        <div class="thumbnails-grid" id="thumbnailsContainer">
+          <!-- يتم توليد الصور المصغرة الأربعة تلقائياً عبر JavaScript حسب اللون المختار -->
+        </div>
+      </div>
+
+      <!-- 2.2 معلومات المنتج والخيارات -->
+      <div class="product-details">
+        <span class="badge-hand">تسليم يدا بيد • الدفع عند الاستلام</span>
+        <h1 class="product-title">قميص الأدهم</h1>
+        <div class="product-price" id="productPriceDisplay">3700 د.ج</div>
+
+        <!-- اختيار اللون (4 ألوان) -->
+        <div class="option-group">
+          <label class="option-label">اللون المختار: <strong id="selectedColorName">أبيض</strong></label>
+          <div class="color-options" id="colorOptionsContainer">
+            <!-- يتم توليد أزرار الألوان الأربعة عبر JavaScript -->
+          </div>
+        </div>
+
+        <!-- اختيار المقاس (52 - 58) -->
+        <div class="option-group">
+          <label class="option-label">المقاس:</label>
+          <div class="size-options" id="sizeOptionsContainer">
+            <!-- يتم توليد أزرار المقاسات عبر JavaScript -->
+          </div>
+        </div>
+
+        <!-- تحديد الكمية -->
+        <div class="option-group">
+          <label class="option-label" for="quantityInput">الكمية:</label>
+          <div class="quantity-control">
+            <button type="button" class="qty-btn" id="decreaseQtyBtn" aria-label="إنقاص الكمية">−</button>
+            <input type="number" id="quantityInput" class="qty-input" value="1" min="1" readonly />
+            <button type="button" class="qty-btn" id="increaseQtyBtn" aria-label="زيادة الكمية">+</button>
+          </div>
+        </div>
+
+        <!-- أزرار الإجراء -->
+        <div class="action-buttons">
+          <button type="button" class="btn btn-black" id="buyNowBtn">اشتري الآن</button>
+          <button type="button" class="btn btn-green" id="addToCartBtn">أضف إلى السلة</button>
+        </div>
+
+        <!-- وصف المنتج ومميزاته -->
+<div class="product-description">
+  <h3>وصف المنتج</h3>
+  <p>قميص الأدهم — قطعة أنيقة بقصّة عصرية مريحة، تجمع بين الرقي والبساطة لتناسب إطلالاتك اليومية بثقة وأناقة.</p>
+  <ul class="features-list">
+    <li>قماش فاخر خفيف وناعم يمنحك راحة طوال اليوم.</li>
+    <li>تفصيل متقن يناسب الإطلالات اليومية والكاجوال.</li>
+    <li>متوفر بـ 4 ألوان مميزة ومقاسات من 52 إلى 58.</li>
+    <li>معاينة واستلام مباشر يداً بيد دون أي رسوم توصيل.</li>
+  </ul>
+</div>
+      </div>
+    </section>
+
+    <!-- 3. نموذج الطلب السريع -->
+    <section class="card quick-order-section" id="quickOrderSection">
+      <div class="section-header">
+        <h2>نموذج الطلب السريع</h2>
+        <p>أدخل معلوماتك لتأكيد طلب القميص بالمواصفات المختارة أعلاه</p>
+      </div>
+
+      <form id="quickOrderForm" novalidate>
+        <div class="form-grid">
+          <!-- الاسم الكامل -->
+          <div class="form-group">
+            <label for="customerName">الاسم الكامل <span class="required">*</span></label>
+            <input type="text" id="customerName" name="customerName" placeholder="مثال: محمد بن علي" required />
+            <small class="error-msg" id="nameError"></small>
+          </div>
+
+          <!-- رقم الهاتف الأساسي -->
+          <div class="form-group">
+            <label for="customerPhone">رقم الهاتف <span class="required">*</span></label>
+            <input type="tel" id="customerPhone" name="customerPhone" placeholder="مثال: 0550123456" inputmode="numeric" required />
+            <small class="error-msg" id="phoneError"></small>
+          </div>
+
+          <!-- رقم هاتف احتياطي -->
+          <div class="form-group">
+            <label for="backupPhone">رقم هاتف احتياطي (اختياري)</label>
+            <input type="tel" id="backupPhone" name="backupPhone" placeholder="رقم إضافي للتواصل عند الضرورة" inputmode="numeric" />
+            <small class="error-msg" id="backupPhoneError"></small>
+          </div>
+        </div>
+
+        <!-- ملخص الطلب داخل النموذج -->
+        <div class="order-summary-box">
+          <div class="summary-row">
+            <span>المنتج المختار:</span>
+            <span id="summarySelectionText">قميص الأدهم (أبيض - مقاس 52) × 1</span>
+          </div>
+          <div class="summary-row">
+            <span>سعر المنتجات:</span>
+            <span id="summarySubtotal">3700 د.ج</span>
+          </div>
+          <div class="summary-row">
+            <span>التسليم:</span>
+            <span class="free-delivery">يدا بيد — 0 د.ج</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>الإجمالي الكلي:</span>
+            <span id="summaryTotal">3700 د.ج</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-green btn-submit" id="quickOrderSubmitBtn">
+          تأكيد الطلب
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- الفوتر البسيط -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>جميع الحقوق محفوظة &copy; متجر <strong>M</strong> — التسليم يدا بيد</p>
+    </div>
+  </footer>
+
+  <!-- حاوية الإشعارات المنبثقة (Toasts) -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- ملفات الجافاسكريبت بالترتيب -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/discord.js"></script>
+  <script src="assets/js/product-page.js"></script>
+  <script src="assets/js/enhancements.js"></script>
+</body>
+</html>

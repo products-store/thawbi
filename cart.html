@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سلة التسوق | متجر M</title>
+
+  <!-- خط Cairo من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <!-- ملف التنسيقات الرئيسي -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/enhancements.css" />
+</head>
+<body>
+
+  <!-- 1. الهيدر الثابت -->
+  <header class="site-header">
+    <div class="container header-container">
+<a href="index.html" class="logo">
+  <img src="images/logo.jpg" alt="Thawbi - ثوبي" class="logo-img" onerror="this.style.display='none'" />
+  <span class="logo-text">Thawbi</span>
+</a>
+
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="about.html" class="nav-link">من نحن</a>
+        <a href="contact.html" class="nav-link">تواصل معنا</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="cart.html" class="cart-btn" aria-label="سلة التسوق">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- قائمة الهاتف المنسدلة -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link">الرئيسية</a>
+      <a href="about.html" class="mobile-nav-link">من نحن</a>
+      <a href="contact.html" class="mobile-nav-link">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <!-- 2. المحتوى الرئيسي -->
+  <main class="container main-content">
+    <h1 class="page-title">سلة التسوق</h1>
+
+    <!-- حاوية السلة (تُملأ تلقائياً عبر cart-page.js) -->
+    <div id="cartContainer"></div>
+  </main>
+
+  <!-- الفوتر البسيط -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>جميع الحقوق محفوظة &copy; متجر <strong>M</strong> — التسليم يدا بيد</p>
+    </div>
+  </footer>
+
+  <!-- حاوية الإشعارات المنبثقة -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- ملفات الجافاسكريبت بالترتيب -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/cart-page.js"></script>
+  <script src="assets/js/enhancements.js"></script>
+</body>
+</html>
