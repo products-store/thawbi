@@ -5,7 +5,7 @@ const DiscordService = {
   async sendOrder(orderData) {
     const webhookUrl = STORE_CONFIG.discordWebhookUrl;
 
-    if (!webhookUrl || webhookUrl.includes("https://discord.com/api/webhooks/1574836615229218959/1A3NvNOCPvL29Ei1axMo6naeW9Uj-w1giJSCA5w3rwAq8-PZt7YcAu9UVLDqIgz446YK")) {
+    if (!webhookUrl || webhookUrl.includes("YOUR_WEBHOOK_ID")) {
       throw new Error("لم يتم ضبط رابط Discord Webhook في ملف config.js");
     }
 
@@ -76,7 +76,7 @@ const DiscordService = {
   async sendContactMessage({ name, contact, message }) {
     const webhookUrl = STORE_CONFIG.discordWebhookUrl;
 
-    if (!webhookUrl || webhookUrl.includes("https://discord.com/api/webhooks/1574836615229218959/1A3NvNOCPvL29Ei1axMo6naeW9Uj-w1giJSCA5w3rwAq8-PZt7YcAu9UVLDqIgz446YK")) {
+    if (!webhookUrl || webhookUrl.includes("YOUR_WEBHOOK_ID")) {
       throw new Error("لم يتم ضبط رابط Discord Webhook في ملف config.js");
     }
 
